@@ -1,0 +1,43 @@
+<style>
+	.sonacast-container {
+		max-width: 1080px;
+		margin: auto;
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.sonacast-episode {
+		flex-basis: 48%;
+		margin-bottom: 4%;
+	}
+	.sonacast-episode:nth-child(odd) {
+		margin-right: 4%;
+	}
+	.sonacast-episode iframe {
+		width: 100%;
+	}
+	@media (max-width: 450px) {
+		.sonacast-episode {
+			flex-basis: 100%;
+		}
+		.sonacast-episode:nth-child(odd) {
+			margin-right: 0;
+		}
+	}
+</style>
+
+<div class="sonacast-container">
+	<div class="sonacast-episode">
+		<iframe src="https://anchor.fm/sonananotech/embed/episodes/Episode-1-Darren-Rowles--CEO-and-President-of-Sona-Nanotech---PART-1-e3mr6v/a-acvn1c" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+	</div>
+	<div class="sonacast-episode">
+		<iframe src="https://anchor.fm/sonananotech/embed/episodes/Episode-2-Darren-Rowles--CEO-and-President-of-Sona-Nanotech---PART-2-e3mr8h/a-acvn5o" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+	</div>
+	<div class="sonacast-episode">
+		<iframe src="https://anchor.fm/sonananotech/embed/episodes/Episode-3---The-growing-importance-of-multiplexing-for-lateral-flow-assays-e3p9q3/a-adcs2t" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+	</div>
+	<div class="sonacast-episode">
+		<iframe src="https://anchor.fm/sonananotech/embed/episodes/Episode-4-The-rapid-point-of-care-diagnostic-test-market-e3rj7n/a-adq2r5" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+	</div>
+</div>

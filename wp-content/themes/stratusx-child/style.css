@@ -1,0 +1,22 @@
+/*
+Theme Name:     Stratus - Child Theme
+Theme URI:      http://themovation.com/stratus
+Template:       stratusx
+Author:         Themovation
+Author URI:     http://themovation.com
+Version:        3.0
+Text Domain:    stratus
+Domain Path:    /languages/
+*/
+
+
+/* = Theme customization starts here
+-------------------------------------------------------------- */
+
+.promo-banner {
+    padding-top: 62px;
+}
+
+.promo-banner .wrap {
+    padding-top: 0!important;
+}
