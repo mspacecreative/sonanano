@@ -7,3 +7,12 @@ function enqueue_child_theme_style() {
 	), 1.0 );
 }
 
+// SONACAST
+function sonaCastEpisodes() {
+	ob_start();
+		get_template_part('includes/sonacast');
+	return ob_get_clean();
+}
+
+add_shortcode( 'sonacast_episodes', 'sonaCastEpisodes' );
+
