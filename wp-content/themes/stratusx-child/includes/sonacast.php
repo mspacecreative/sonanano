@@ -51,7 +51,9 @@ if( have_rows('episodes') ): ?>
 
         <div class="sonacast-episode">
 			<h3><span style="font-weight: bold;"><?php esc_html_e('Episode #'); ?><?php the_sub_field('episode_#'); ?></span> <?php the_sub_field('title'); ?></h3>
-			<iframe src="https://anchor.fm/sonananotech/embed/episodes/<?php the_sub_field('episode'); ?>" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+			<audio controls>
+				<source src="<?php the_sub_field('episode'); ?>">
+			</audio>
 		</div>
 
     <?php endwhile;
