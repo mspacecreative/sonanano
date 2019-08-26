@@ -31,9 +31,16 @@
 		background-color: #000;
 		color: #fff;
 	}
+	audio {
+		width: 100%;
+	}
+	audio:focus {
+		border: none;
+	}
 	.sonacast-episode h3 {
 		line-height: 1.25em;
 		font-size: 20px;
+		margin-bottom: 20px;
 	}
 	.sonacast-episode .inner {
 		padding: 45px 25px 25px;
