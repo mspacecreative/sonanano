@@ -95,10 +95,10 @@ endif; ?>
 	
 <script>
 	$(".audio-file").click(function () {
-	    if ($('.audio-file').paused == false) {
-			$('.audio-file').pause();
+	    if (this.paused == false) {
+			this.pause();
 	    } else {
-			$('.audio-file').play();
+			this.play();
 	    }
 	});
 </script>
