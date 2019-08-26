@@ -92,16 +92,3 @@ if( have_rows('episodes') ): ?>
     <?php endwhile;
 
 endif; ?>
-	
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/includes/js/audio.min.js" type="text/javascript"></script>
-<script>
-	audiojs.events.ready(function() {
-	  var as = audiojs.createAll();
-	  $('.audio-file').on('click', function(event){
-	    for (var prop in audiojs.instances) {
-	      audiojs.instances[prop].pause();
-	    }
-	    return true;
-	  });
-	});
-</script>
