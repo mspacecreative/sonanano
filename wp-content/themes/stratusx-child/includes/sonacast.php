@@ -93,6 +93,7 @@ if( have_rows('episodes') ): ?>
 
 endif; ?>
 	
+<script src="js/audio.min.js" type="text/javascript"></script>
 <script>
 	audiojs.events.ready(function() {
 	  var as = audiojs.createAll();
