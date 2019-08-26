@@ -61,8 +61,11 @@
 		.sonacast-episode {
 			flex-basis: 100%;
 		}
-		.sonacast-episode {
+		.sonacast-episode, .sonacast-episode:nth-child(3n) {
 			margin-right: 0;
+		}
+		.sonacast-episode {
+			margin-bottom: 5%;
 		}
 	}
 </style>
