@@ -94,11 +94,13 @@ if( have_rows('episodes') ): ?>
 endif; ?>
 	
 <script>
-	$(".audio-file").click(function () {
-	    if (this.paused == false) {
-			this.pause();
-	    } else {
-			this.play();
-	    }
+	$('.audio-file').click(function () {
+		$(".audio-file").not(this).each(function () {
+		    if ($(this).not($(this).paused == false) {
+				$(this).not($(this).pause();
+		    } else {
+				$(this).not($(this).play();
+		    }
+		});
 	});
 </script>
