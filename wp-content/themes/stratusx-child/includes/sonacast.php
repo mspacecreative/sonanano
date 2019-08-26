@@ -27,7 +27,7 @@
 		left: 0;
 		font-size: 15px;
 		padding: 10px 15px;
-		border-radius: 0 0 5px 0;
+		border-radius: 0 0 15px 0;
 		background-color: #000;
 		color: #fff;
 	}
