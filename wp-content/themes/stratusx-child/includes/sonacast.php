@@ -94,19 +94,11 @@ if( have_rows('episodes') ): ?>
 endif; ?>
 	
 <script>
-	var currentAudio = null;
 	$(".audio-file").click(function () {
-	    if(currentAudio != null && !currentAudio.paused && currentAudio != this){
-	      currentAudio.pause();
-	      //Here we reset the audio and put it back to 0.
-	      currentAudio.currentTime = 0;
-	    }
-	    var audio = $('audio')[0];
-	    if (audio.paused) {
-	        audio.play();
-	        currentAudio = audio;
+	    if ($('.audio-file').paused == false) {
+			$('.audio-file').pause();
 	    } else {
-	        audio.pause();
+			$('.audio-file').play();
 	    }
 	});
 </script>
