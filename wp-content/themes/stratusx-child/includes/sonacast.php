@@ -96,10 +96,10 @@ endif; ?>
 <script>
 	$('.audio-file').click(function () {
 		$(".audio-file").not(this).each(function () {
-		    if ($(this).not($(this).paused == false) {
-				$(this).not($(this).pause();
+		    if ($(this).not($(this).paused == false)) {
+				$(this).not($(this).pause());
 		    } else {
-				$(this).not($(this).play();
+				$(this).not($(this).play());
 		    }
 		});
 	});
