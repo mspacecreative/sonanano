@@ -35,6 +35,9 @@
 		line-height: 1.25em;
 		font-size: 20px;
 	}
+	.sonacast-episode .inner {
+		padding: 45px 25px 25px;
+	}
 	@media (max-width: 980px) {
 		.sonacast-episode {
 			flex-basis: 49%;
@@ -68,7 +71,7 @@ if( have_rows('episodes') ): ?>
 
         <div class="sonacast-episode">
 			<div class="inner">
-				<span style="font-weight: bold;"><?php esc_html_e('Episode #'); ?><?php the_sub_field('episode_#'); ?></span>
+				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php the_sub_field('episode_#'); ?></span>
 				<h3><?php the_sub_field('title'); ?></h3>
 				<audio controls>
 					<source src="<?php the_sub_field('episode'); ?>">
