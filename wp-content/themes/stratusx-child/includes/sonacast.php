@@ -35,7 +35,7 @@
 		width: 100%;
 	}
 	audio:focus {
-		border: none;
+		outline: none;
 	}
 	.sonacast-episode h3 {
 		line-height: 1.25em;
