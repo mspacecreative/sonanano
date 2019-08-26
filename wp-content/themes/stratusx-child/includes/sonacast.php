@@ -101,7 +101,7 @@ endif; ?>
 	      //Here we reset the audio and put it back to 0.
 	      currentAudio.currentTime = 0;
 	    }
-	    var audio = $('#sonacast-container')[0];
+	    var audio = $('audio')[0];
 	    if (audio.paused) {
 	        audio.play();
 	        currentAudio = audio;
