@@ -75,7 +75,7 @@
 // check if the repeater field has rows of data
 if( have_rows('episodes') ): ?>
 
-	<div class="sonacast-container">
+	<div id="sonacast-container" class="sonacast-container">
 
  	<?php while ( have_rows('episodes') ) : the_row(); ?>
 
@@ -83,7 +83,7 @@ if( have_rows('episodes') ): ?>
 			<div class="inner">
 				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo get_row_index(); ?></span>
 				<h3><?php the_sub_field('title'); ?></h3>
-				<audio controls>
+				<audio class="audio-file" controls>
 					<source src="<?php the_sub_field('episode'); ?>">
 				</audio>
 			</div>
@@ -92,3 +92,21 @@ if( have_rows('episodes') ): ?>
     <?php endwhile;
 
 endif; ?>
+	
+<script>
+	var currentAudio = null;
+	$(".audio-file").click(function () {
+	    if(currentAudio != null && !currentAudio.paused && currentAudio != this){
+	      currentAudio.pause();
+	      //Here we reset the audio and put it back to 0.
+	      currentAudio.currentTime = 0;
+	    }
+	    var audio = $('#sonacast-container')[0];
+	    if (audio.paused) {
+	        audio.play();
+	        currentAudio = audio;
+	    } else {
+	        audio.pause();
+	    }
+	});
+</script>
