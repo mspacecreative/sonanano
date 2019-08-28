@@ -109,7 +109,7 @@ foreach( $repeater as $i => $row ) {
 }
 
 // multisort
-array_multisort( $order, SORT_ASC, $repeater );
+//array_multisort( $order, SORT_ASC, $repeater );
 
  	if( $repeater ): ?>
 
