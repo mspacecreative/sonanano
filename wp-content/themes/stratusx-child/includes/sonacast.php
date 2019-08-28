@@ -110,7 +110,7 @@
 			<?php endif; ?>
 				
 			<audio class="audio-file" controls>
-				<source src="<?php _sub_field('link') ?>">
+				<source src="<?php the_sub_field('link') ?>">
 			</audio>
 		</div>
 	</div>
