@@ -122,7 +122,6 @@ array_multisort( $order, SORT_DESC, $repeater );
 				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo $row['id']; ?></span>
 				<h3><?php echo $row['title']; ?></h3>
 				
-				<?php if ( get_sub_field('synopsis') ): ?>
 				<div class="synopsis-content">
 					<?php echo $row['synopsis']; ?>
 				</div>
@@ -130,7 +129,6 @@ array_multisort( $order, SORT_DESC, $repeater );
 				<button class="synopsis-button">
 					<?php esc_html_e('Read Synopsis…'); ?>
 				</button>
-				<?php endif; ?>
 				
 				<audio class="audio-file" controls>
 					<source src="<?php echo $row['episode']; ?>">
