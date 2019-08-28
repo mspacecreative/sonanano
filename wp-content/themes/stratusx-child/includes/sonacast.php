@@ -105,7 +105,7 @@ $podcasts = array_reverse(get_field('episodes')); ?>
 				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo get_row_index(); ?></span>
 				<h3><?php echo $podcast['title']; ?></h3>
 				
-				<?php if ( $podcast['synopsis'] ): ?>
+				<?php if ( get_sub_field('synopsis') ): ?>
 				<div class="synopsis-content">
 					<?php echo $podcast['synopsis']; ?>
 				</div>
