@@ -45,6 +45,17 @@
 	.sonacast-episode .inner {
 		padding: 45px 25px 25px;
 	}
+	.synopsis-button {
+		display: inline-block;
+		margin: 0 0 15px;
+		background-color: #000;
+		padding: 5px 10px;
+		color: #fff;
+		border: none;
+	}
+	.synopsis-content {
+		display: none;
+	}
 	@media (max-width: 980px) {
 		.sonacast-episode {
 			flex-basis: 49%;
@@ -83,6 +94,12 @@ if( have_rows('episodes') ): ?>
 			<div class="inner">
 				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo get_row_index(); ?></span>
 				<h3><?php the_sub_field('title'); ?></h3>
+				<p class="synopsis-content">
+					<?php the_sub_field('synopsis'); ?>
+				</p>
+				<button class="synopsis-button">
+					<?php esc_html_e('Read Synopsis'); ?>
+				</button>
 				<audio class="audio-file" controls>
 					<source src="<?php the_sub_field('episode'); ?>">
 				</audio>
@@ -92,3 +109,16 @@ if( have_rows('episodes') ): ?>
     <?php endwhile;
 
 endif; ?>
+	
+<script>
+	(function ($) {
+		$('.synopsis-button').click(function () {
+			$(this).prev('p').slideToggle();
+			$(this).toggleClass('open');
+			
+			if ( $('.synopsis-button').hasClass('open') ) {
+				$(this).html('Close');
+			}
+		});
+	});
+</script>
