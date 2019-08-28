@@ -92,7 +92,7 @@
 <div id="sonacast-container" class="sonacast-container">
 <?php $outs = array(); if( have_rows('episodes') ): ?>
 
-	<?php while ( have_rows('episodes') ) : the_row();  ob_start(); ?>
+	<?php while ( have_rows('episodes') ) : the_row(); ob_start(); ?>
 
     <div class="sonacast-episode">
 		<div class="inner">
@@ -110,7 +110,7 @@
 			<?php endif; ?>
 				
 			<audio class="audio-file" controls>
-				<source src="<?php the_sub_field('link') ?>">
+				<source src="<?php the_sub_field('episode') ?>">
 			</audio>
 		</div>
 	</div>
