@@ -119,7 +119,7 @@ array_multisort( $order, SORT_DESC, $repeater );
 
         <div class="sonacast-episode">
 			<div class="inner">
-				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo $row['id']; ?></span>
+				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo $row['value']; ?></span>
 				<h3><?php echo $row['title']; ?></h3>
 				
 				<div class="synopsis-content">
