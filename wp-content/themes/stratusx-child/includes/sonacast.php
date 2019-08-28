@@ -128,11 +128,10 @@ echo implode($outs); ?>
 			$(this).prev().slideToggle();
 			$(this).toggleClass('open');
 			
-			if ( $('.synopsis-button').hasClass('open') ) {
+			if ( $(this).hasClass('open') ) {
 				$(this).html('Hide Synopsis');
 			} else {
 				$(this).html('Read Synopsis…');
-				$(this).removeClass('open');
 			}
 		});
 	})(jQuery);
