@@ -58,7 +58,7 @@
 		font-size: 14px;
 	}
 	.sonacast-episode ul {
-		padding: 0 0 0 18px;
+		padding: 0 0 0 16px;
 	}
 	.synopsis-content {
 		display: none;
