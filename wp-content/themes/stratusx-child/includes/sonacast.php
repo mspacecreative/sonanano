@@ -40,7 +40,7 @@
 	.sonacast-episode h3 {
 		line-height: 1.25em;
 		font-size: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 5px;
 	}
 	.sonacast-episode .inner {
 		padding: 45px 25px 25px;
@@ -49,11 +49,13 @@
 		display: inline-block;
 		margin: 0 0 15px;
 		border: none;
-		font-size: 13px;
+		font-size: 14px;
 		outline: none;
+		font-weight: bold;
 	}
 	.synopsis-content {
 		display: none;
+		margin-top: 20px;
 	}
 	@media (max-width: 980px) {
 		.sonacast-episode {
@@ -97,7 +99,7 @@ if( have_rows('episodes') ): ?>
 					<?php the_sub_field('synopsis'); ?>
 				</p>
 				<button class="synopsis-button">
-					<?php esc_html_e('Read Synopsis'); ?>
+					<?php esc_html_e('Read Synopsis…'); ?>
 				</button>
 				<audio class="audio-file" controls>
 					<source src="<?php the_sub_field('episode'); ?>">
@@ -118,7 +120,7 @@ endif; ?>
 			if ( $('.synopsis-button').hasClass('open') ) {
 				$(this).html('Close');
 			} else {
-				$(this).html('Read Synopsis');
+				$(this).html('Read Synopsis…');
 			}
 		});
 	})(jQuery);
