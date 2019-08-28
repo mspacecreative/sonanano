@@ -117,6 +117,8 @@ endif; ?>
 			
 			if ( $('.synopsis-button').hasClass('open') ) {
 				$(this).html('Close');
+			} else {
+				$(this).html('Read Synopsis');
 			}
 		});
 	})(jQuery);
