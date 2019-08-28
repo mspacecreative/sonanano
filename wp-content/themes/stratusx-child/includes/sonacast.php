@@ -93,21 +93,38 @@
 
 // check if the repeater field has rows of data
 //if( have_rows('episodes') ):
-$podcasts = array_reverse(get_field('episodes')); ?>
+//$podcasts = array_reverse(get_field('episodes'));
+
+// get repeater field data
+$repeater = get_field('episodes');
+
+// vars
+$order = array();
+
+// populate order
+foreach( $repeater as $i => $row ) {
+	
+	$order[ $i ] = $row['id'];
+	
+}
+
+// multisort
+array_multisort( $order, SORT_DESC, $repeater );
+
+ 	if( $repeater ): ?>
 
 	<div id="sonacast-container" class="sonacast-container">
 
- 	<?php //while ( have_rows('episodes') ) : the_row();
- 	foreach ($podcasts as $podcast): ?>
+ 		<?php foreach( $repeater as $i => $row ): ?>
 
         <div class="sonacast-episode">
 			<div class="inner">
 				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo get_row_index(); ?></span>
-				<h3><?php echo $podcast['title']; ?></h3>
+				<h3><?php echo $row['title']; ?></h3>
 				
 				<?php if ( get_sub_field('synopsis') ): ?>
 				<div class="synopsis-content">
-					<?php echo $podcast['synopsis']; ?>
+					<?php echo $row['synopsis']; ?>
 				</div>
 				
 				<button class="synopsis-button">
@@ -116,15 +133,13 @@ $podcasts = array_reverse(get_field('episodes')); ?>
 				<?php endif; ?>
 				
 				<audio class="audio-file" controls>
-					<source src="<?php echo $podcast['episode']; ?>">
+					<source src="<?php echo $row['episode']; ?>">
 				</audio>
 			</div>
 		</div>
 
-    <?php //endwhile;
-    endforeach;
-
-//endif; ?>
+    	<?php endforeach;
+    endif; ?>
 	
 <script>
 	(function ($) {
