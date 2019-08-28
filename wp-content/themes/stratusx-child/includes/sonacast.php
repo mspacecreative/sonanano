@@ -102,14 +102,14 @@ $repeater = get_field('episodes');
 $order = array();
 
 // populate order
-foreach( $repeater as $i => $row ) {
+/*foreach( $repeater as $i => $row ) {
 	
 	$order[ $i ] = $row['id'];
 	
-}
+}*/
 
 // multisort
-//array_multisort( $order, SORT_ASC, $repeater );
+array_multisort( $order, SORT_DESC, $repeater );
 
  	if( $repeater ): ?>
 
