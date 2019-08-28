@@ -98,9 +98,9 @@ if( have_rows('episodes') ): ?>
 				<h3><?php the_sub_field('title'); ?></h3>
 				
 				<?php if ( get_sub_field('synopsis') ): ?>
-				<p class="synopsis-content">
+				<span class="synopsis-content">
 					<?php the_sub_field('synopsis'); ?>
-				</p>
+				</span>
 				
 				<button class="synopsis-button">
 					<?php esc_html_e('Read Synopsis…'); ?>
