@@ -54,6 +54,9 @@
 		font-weight: bold;
 		padding: 0;
 	}
+	.sonacast-episode p, .sonacast-episode li {
+		font-size: 14px;
+	}
 	.synopsis-content {
 		display: none;
 		margin-top: 10px;
