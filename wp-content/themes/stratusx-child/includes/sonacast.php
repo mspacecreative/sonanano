@@ -92,20 +92,22 @@
 <?php
 
 // check if the repeater field has rows of data
-if( have_rows('episodes') ): ?>
+//if( have_rows('episodes') ):
+$podcasts = array_reverse(get_field('episodes')); ?>
 
 	<div id="sonacast-container" class="sonacast-container">
 
- 	<?php while ( have_rows('episodes') ) : the_row(); ?>
+ 	<?php //while ( have_rows('episodes') ) : the_row();
+ 	foreach ($podcasts as $podcast): ?>
 
         <div class="sonacast-episode">
 			<div class="inner">
 				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo get_row_index(); ?></span>
-				<h3><?php the_sub_field('title'); ?></h3>
+				<h3><?php echo $podcast['title']; ?></h3>
 				
-				<?php if ( get_sub_field('synopsis') ): ?>
+				<?php if ( $podcast ): ?>
 				<div class="synopsis-content">
-					<?php the_sub_field('synopsis'); ?>
+					<?php echo $podcast['synopsis']; ?>
 				</div>
 				
 				<button class="synopsis-button">
@@ -114,14 +116,15 @@ if( have_rows('episodes') ): ?>
 				<?php endif; ?>
 				
 				<audio class="audio-file" controls>
-					<source src="<?php the_sub_field('episode'); ?>">
+					<source src="<?php echo $podcast['episode']; ?>">
 				</audio>
 			</div>
 		</div>
 
-    <?php endwhile;
+    <?php //endwhile;
+    endforeach;
 
-endif; ?>
+//endif; ?>
 	
 <script>
 	(function ($) {
