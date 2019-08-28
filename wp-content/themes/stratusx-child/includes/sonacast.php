@@ -95,12 +95,17 @@ if( have_rows('episodes') ): ?>
 			<div class="inner">
 				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo get_row_index(); ?></span>
 				<h3><?php the_sub_field('title'); ?></h3>
+				
+				<?php if ( get_sub_field('synopsis') ): ?>
 				<p class="synopsis-content">
 					<?php the_sub_field('synopsis'); ?>
 				</p>
+				
 				<button class="synopsis-button">
 					<?php esc_html_e('Read Synopsis…'); ?>
 				</button>
+				<?php endif; ?>
+				
 				<audio class="audio-file" controls>
 					<source src="<?php the_sub_field('episode'); ?>">
 				</audio>
