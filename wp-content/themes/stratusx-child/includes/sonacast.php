@@ -92,10 +92,10 @@
 <div id="sonacast-container" class="sonacast-container">
 <?php
 $rows_before_reverse = get_field('episodes');
-$episodenumber = get_row_index();
 $rows = array_reverse($rows_before_reverse);
 foreach($rows as $row) {
 $podcasttitle = $row['title'];
+$episodenumber = get_row_index( $row );
 $podcastsynopsis = $row['synopsis'];
 $podcastepisode = $row['episode']; ?>
 
