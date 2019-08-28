@@ -89,8 +89,8 @@
 	}
 </style>
 
-<?php $outs = array(); if( have_rows('episodes') ): ?>
 <div id="sonacast-container" class="sonacast-container">
+<?php $outs = array(); if( have_rows('episodes') ): ?>
 
 	<?php while ( have_rows('episodes') ) : the_row();  ob_start(); ?>
 
@@ -116,10 +116,11 @@
 	</div>
 	
 	<?php $outs[] = ob_get_clean(); endwhile; ?>
-</div>
+
 <?php endif;
 $outs = array_reverse($outs);
 echo implode($outs); ?>
+</div>
 	
 <script>
 	(function ($) {
