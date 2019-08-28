@@ -89,19 +89,14 @@
 	}
 </style>
 
+<div id="sonacast-container" class="sonacast-container">
 <?php
-
-// check if the repeater field has rows of data
-//if( have_rows('episodes') ):
 $rows_before_reverse = get_field('episodes');
 $rows = array_reverse($rows_before_reverse);
 foreach($rows as $row) {
 $podcasttitle = $row['title'];
 $podcastsynopsis = $row['synopsis'];
-$podcastepisode = $row['episode'];
-} ?>
-
-	<div id="sonacast-container" class="sonacast-container">
+$podcastepisode = $row['episode']; ?>
 
         <div class="sonacast-episode">
 			<div class="inner">
@@ -121,8 +116,9 @@ $podcastepisode = $row['episode'];
 				</audio>
 			</div>
 		</div>
-
-	</div>
+		
+<?php } ?>
+</div>
 	
 <script>
 	(function ($) {
