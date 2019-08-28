@@ -120,7 +120,7 @@ endif; ?>
 <script>
 	(function ($) {
 		$('.synopsis-button').click(function () {
-			$(this).prev('p').slideToggle();
+			$(this).prev().slideToggle();
 			$(this).toggleClass('open');
 			
 			if ( $('.synopsis-button').hasClass('open') ) {
