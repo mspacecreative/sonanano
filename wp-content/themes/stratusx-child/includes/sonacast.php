@@ -104,7 +104,7 @@ $order = array();
 // populate order
 foreach( $repeater as $i => $row ) {
 	
-	$order[ $i ] = $row['name'];
+	$order[ $i ] = $row;
 	
 }
 
