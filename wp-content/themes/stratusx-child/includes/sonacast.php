@@ -48,10 +48,9 @@
 	.synopsis-button {
 		display: inline-block;
 		margin: 0 0 15px;
-		background-color: #000;
-		padding: 5px 10px;
-		color: #fff;
 		border: none;
+		font-size: 13px;
+		outline: none;
 	}
 	.synopsis-content {
 		display: none;
@@ -120,5 +119,5 @@ endif; ?>
 				$(this).html('Close');
 			}
 		});
-	});
+	})(jQuery);
 </script>
