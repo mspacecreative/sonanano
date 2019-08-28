@@ -40,7 +40,7 @@
 	.sonacast-episode h3 {
 		line-height: 1.25em;
 		font-size: 20px;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 	.sonacast-episode .inner {
 		padding: 45px 25px 25px;
@@ -52,10 +52,11 @@
 		font-size: 14px;
 		outline: none;
 		font-weight: bold;
+		padding: 0;
 	}
 	.synopsis-content {
 		display: none;
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 	@media (max-width: 980px) {
 		.sonacast-episode {
