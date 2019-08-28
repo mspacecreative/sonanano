@@ -95,7 +95,7 @@ $rows_before_reverse = get_field('episodes');
 $rows = array_reverse($rows_before_reverse);
 foreach($rows as $row) {
 $podcasttitle = $row['title'];
-$episodenumber = $row['id'];
+$episodenumber = $row['ID'];
 $podcastsynopsis = $row['synopsis'];
 $podcastepisode = $row['episode']; ?>
 
