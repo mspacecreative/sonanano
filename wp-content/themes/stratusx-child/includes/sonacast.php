@@ -132,6 +132,7 @@ echo implode($outs); ?>
 				$(this).html('Hide Synopsis');
 			} else {
 				$(this).html('Read Synopsis…');
+				$(this).removeClass('open');
 			}
 		});
 	})(jQuery);
