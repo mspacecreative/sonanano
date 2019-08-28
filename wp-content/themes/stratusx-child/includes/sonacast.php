@@ -124,7 +124,7 @@ endif; ?>
 			$(this).toggleClass('open');
 			
 			if ( $('.synopsis-button').hasClass('open') ) {
-				$(this).html('Close');
+				$(this).html('Hide Synopsis');
 			} else {
 				$(this).html('Read Synopsis…');
 			}
