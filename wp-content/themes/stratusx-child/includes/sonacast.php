@@ -89,37 +89,37 @@
 	}
 </style>
 
+<?php $outs = array(); if( have_rows('episodes') ): ?>
 <div id="sonacast-container" class="sonacast-container">
-<?php
-$rows_before_reverse = get_field('episodes');
-$rows = array_reverse($rows_before_reverse);
-foreach($rows as $row) {
-$podcasttitle = $row['title'];
-$episodenumber = $row['ID'];
-$podcastsynopsis = $row['synopsis'];
-$podcastepisode = $row['episode']; ?>
 
-        <div class="sonacast-episode">
-			<div class="inner">
-				<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo $episodenumber; ?></span>
-				<h3><?php echo $podcasttitle; ?></h3>
+	<?php while ( have_rows('episodes') ) : the_row();  ob_start(); ?>
+
+    <div class="sonacast-episode">
+		<div class="inner">
+			<span style="font-weight: bold;"><?php esc_html_e('EP'); ?><?php echo get_row_index(); ?></span>
+			<h3><?php the_sub_field('title'); ?></h3>
 				
-				<div class="synopsis-content">
-					<?php echo $podcastsynopsis; ?>
-				</div>
-				
-				<button class="synopsis-button">
-					<?php esc_html_e('Read Synopsis…'); ?>
-				</button>
-				
-				<audio class="audio-file" controls>
-					<source src="<?php echo $podcastepisode; ?>">
-				</audio>
+			<?php if ( get_sub_field('synopsis') ): ?>
+			<div class="synopsis-content">
+				<?php the_sub_field('synopsis'); ?>
 			</div>
+				
+			<button class="synopsis-button">
+				<?php esc_html_e('Read Synopsis…'); ?>
+			</button>
+			<?php endif; ?>
+				
+			<audio class="audio-file" controls>
+				<source src="<?php _sub_field('link') ?>">
+			</audio>
 		</div>
-		
-<?php } ?>
+	</div>
+	
+	<?php $outs[] = ob_get_clean(); endwhile; ?>
 </div>
+<?php endif;
+$outs = array_reverse($outs);
+echo implode($outs); ?>
 	
 <script>
 	(function ($) {
