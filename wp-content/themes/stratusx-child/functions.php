@@ -21,6 +21,6 @@ function sonaCastEpisodes() {
 }
 
 // ACTIONS, FILTERS, SHORTCODES
-add_action('wp_enqueue_scripts', 'footerScripts');
+add_action('wp_enqueue_scripts', 'footerScripts', 20);
 add_shortcode( 'sonacast_episodes', 'sonaCastEpisodes' );
 
