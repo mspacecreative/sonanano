@@ -9,7 +9,7 @@ function enqueue_child_theme_style() {
 
 // Load scripts in footer
 function footerScripts() {
-	wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true);
+	wp_register_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), null, true);
 	wp_enqueue_script('scripts');
 }
 
