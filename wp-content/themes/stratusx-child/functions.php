@@ -7,6 +7,12 @@ function enqueue_child_theme_style() {
 	), 1.0 );
 }
 
+// Load scripts in footer
+function footerScripts() {
+	wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true);
+	wp_enqueue_script('scripts');
+}
+
 // SONACAST
 function sonaCastEpisodes() {
 	ob_start();
@@ -14,5 +20,7 @@ function sonaCastEpisodes() {
 	return ob_get_clean();
 }
 
+// ACTIONS, FILTERS, SHORTCODES
+add_action('wp_enqueue_scripts', 'footerScripts');
 add_shortcode( 'sonacast_episodes', 'sonaCastEpisodes' );
 
