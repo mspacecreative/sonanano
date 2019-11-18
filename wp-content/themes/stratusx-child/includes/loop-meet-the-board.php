@@ -41,12 +41,17 @@ if( $the_query->have_posts() ): ?>
 		list-style: none;
 		justify-content: center;
 		text-align: center;
-		margin: 50px 0;
+		margin: 50px 0 0;
 		flex-wrap: wrap;
 	}
+	@media (min-width: 981px) {
+		.board-flex li {
+			flex-basis: 23.5%;
+			margin-right: 2%;
+		}
+	}
 	.board-flex li {
-		flex-basis: 23.5%;
-		margin-right: 2%;
+		margin-bottom: 50px;
 	}
 	.board-flex li:last-of-type {
 		margin-right: 0;
