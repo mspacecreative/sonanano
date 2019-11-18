@@ -10,7 +10,7 @@ $the_query = new WP_Query( $args );
 if( $the_query->have_posts() ): ?>
 
 <h2>
-	<?php esc_html_e('Meet the Board: Questions &amp; Answers with '); ?>
+	<?php esc_html_e('Meet the Board: Questions &amp; Answers'); ?>
 </h2>
 	
 <ul class="board-flex">
