@@ -32,7 +32,7 @@ if( $the_query->have_posts() ): ?>
 
 </ul>
 	
-<?php endif; ?>
+<?php endif; wp_reset_query(); ?>
 
 <style>
 	.board-flex {
