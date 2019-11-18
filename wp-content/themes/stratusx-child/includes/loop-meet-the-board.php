@@ -2,7 +2,7 @@
 $args = array(
 	'numberposts'	=> -1,
 	'post_type'		=> 'post',
-	'category_name' => 'Meet the Board'
+	'category_name' => 'meet-the-board'
 );
 
 $the_query = new WP_Query( $args );
