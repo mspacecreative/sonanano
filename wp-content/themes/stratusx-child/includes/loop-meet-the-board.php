@@ -40,9 +40,10 @@ if( $the_query->have_posts() ): ?>
 		justify-content: center;
 		text-align: center;
 		margin: 50px 0;
+		flex-wrap: wrap;
 	}
 	.board-flex li {
-		flex-basis: 23%;
+		flex-basis: 23.5%;
 		margin-right: 2%;
 	}
 	.board-flex li:last-of-type {
