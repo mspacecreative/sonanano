@@ -20,7 +20,15 @@ function sonaCastEpisodes() {
 	return ob_get_clean();
 }
 
+// MEET THE BOARD
+function meetTheBoard() {
+	ob_start();
+		get_template_part('includes/loop-meet-the-board');
+	return ob_get_clean();
+}
+
 // ACTIONS, FILTERS, SHORTCODES
 add_action('wp_enqueue_scripts', 'footerScripts', 20);
 add_shortcode( 'sonacast_episodes', 'sonaCastEpisodes' );
+add_shortcode( 'the_board', 'meetTheBoard' );
 
