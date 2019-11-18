@@ -31,3 +31,17 @@ if( $the_query->have_posts() ): ?>
 </ul>
 	
 <?php endif; ?>
+
+<style>
+	.board-flex {
+		display: flex;
+		padding: 0;
+		list-style: none;
+		justify-content: center;
+		text-align: center;
+	}
+	.board-flex img {
+		max-width: 150px;
+		border-radius: 1000px;
+	}
+</style>
