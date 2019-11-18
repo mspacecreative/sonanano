@@ -22,7 +22,7 @@ if( $the_query->have_posts() ): ?>
 			<?php if ( has_post_thumbnail() ) {
 				echo the_post_thumbnail( array(200,200) );
 			} ?>
-			<h3><?php esc_html_e('With '); the_field('doctor_name'); ?></h3>
+			<h6><?php esc_html_e('With '); the_field('doctor_name'); ?></h6>
 		</a>
 	</li>
 
