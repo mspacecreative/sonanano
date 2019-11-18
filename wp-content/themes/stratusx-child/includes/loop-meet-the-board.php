@@ -21,8 +21,10 @@ if( $the_query->have_posts() ): ?>
 		<a href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ) {
 				echo the_post_thumbnail( array(200,200) );
-			} ?>
+			}
+			if ( get_field('doctor_name') ): ?>
 			<h6><?php the_field('doctor_name'); ?></h6>
+			<?php endif; ?>
 		</a>
 	</li>
 
