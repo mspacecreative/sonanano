@@ -9,7 +9,7 @@ $the_query = new WP_Query( $args );
 
 if( $the_query->have_posts() ): ?>
 
-<h2>
+<h2 class="text-align-center">
 	<?php esc_html_e('Meet the Board: Questions &amp; Answers'); ?>
 </h2>
 	
@@ -39,9 +39,13 @@ if( $the_query->have_posts() ): ?>
 		list-style: none;
 		justify-content: center;
 		text-align: center;
+		margin: 50px 0;
 	}
 	.board-flex img {
 		max-width: 150px;
 		border-radius: 1000px;
+	}
+	.text-align-center {
+		text-align: center;
 	}
 </style>
