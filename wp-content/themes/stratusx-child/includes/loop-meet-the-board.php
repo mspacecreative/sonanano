@@ -46,14 +46,14 @@ if( $the_query->have_posts() ): ?>
 	}
 	@media (min-width: 768px) {
 		.board-flex li {
-			flex-basis: 23.5%;
-			margin-right: 2%;
+			flex-basis: 19.5%;
+			margin-right: 4%;
 		}
 	}
 	@media (max-width: 850px) and (orientation: landscape) {
 		.board-flex li {
-			flex-basis: 23.5%;
-			margin-right: 2%;
+			flex-basis: 19.5%;
+			margin-right: 4%;
 		}
 	}
 	.board-flex li {
