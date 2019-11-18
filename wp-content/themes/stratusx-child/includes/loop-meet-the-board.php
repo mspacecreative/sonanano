@@ -50,7 +50,7 @@ if( $the_query->have_posts() ): ?>
 			margin-right: 2%;
 		}
 	}
-	@media (min-width: 850px) and (orientation: landscape) {
+	@media (max-width: 850px) and (orientation: landscape) {
 		.board-flex li {
 			flex-basis: 23.5%;
 			margin-right: 2%;
