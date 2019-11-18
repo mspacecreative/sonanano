@@ -44,7 +44,13 @@ if( $the_query->have_posts() ): ?>
 		margin: 50px 0 0;
 		flex-wrap: wrap;
 	}
-	@media (min-width: 981px) {
+	@media (min-width: 768px) {
+		.board-flex li {
+			flex-basis: 23.5%;
+			margin-right: 2%;
+		}
+	}
+	@media (min-width: 850px) and (orientation: landscape) {
 		.board-flex li {
 			flex-basis: 23.5%;
 			margin-right: 2%;
