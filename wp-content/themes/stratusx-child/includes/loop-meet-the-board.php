@@ -20,7 +20,7 @@ if( $the_query->have_posts() ): ?>
 	<li>
 		<a href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ) {
-				echo the_post_thumbnail( array(200,200, TRUE) );
+				echo the_post_thumbnail( array(200,200) );
 			} ?>
 			<h6><?php esc_html_e('With '); the_field('doctor_name'); ?></h6>
 		</a>
@@ -40,6 +40,13 @@ if( $the_query->have_posts() ): ?>
 		justify-content: center;
 		text-align: center;
 		margin: 50px 0;
+	}
+	.board-flex li {
+		flex-basis: 23%;
+		margin-right: 2%;
+	}
+	.board-flex li:last-of-type {
+		margin-right: 0;
 	}
 	.board-flex img {
 		max-width: 150px;
